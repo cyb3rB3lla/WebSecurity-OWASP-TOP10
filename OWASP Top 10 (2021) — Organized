@@ -1,0 +1,308 @@
+1. Broken Access Control
+Description:
+Occurs when access control policies are poorly implemented, allowing users to act outside their intended permissions.
+
+Impact:
+
+Unauthorized access to data, systems, or functions
+
+Viewing, modifying, or deleting sensitive information
+
+Privilege escalation
+
+Prevention:
+
+Enforce the principle of least privilege
+
+Implement server-side access control checks
+
+Deny by default unless explicitly allowed
+
+
+
+2. Cryptographic Failures
+
+Description:
+Happens when sensitive data is not properly protected during storage or transmission.
+
+Common Issues:
+
+Plaintext storage
+
+Weak or outdated algorithms
+
+Reused or default keys
+
+Invalid or untrusted certificates
+
+Impact:
+
+Data breaches
+
+MITM attacks
+
+Identity theft
+
+Prevention:
+
+Use modern encryption standards
+
+Encrypt all sensitive data in transit and at rest
+
+Deploy strong SSL/TLS certificates
+
+
+
+
+3. Injection
+
+Description:
+Occurs when untrusted data is sent to an interpreter, causing it to execute unintended commands (e.g., SQLi, XSS, command injection).
+
+Common Causes:
+
+Unsanitized user input
+
+Dynamic queries without parameterization
+
+String concatenation in queries
+
+Impact:
+
+Unauthorized data access
+
+Data modification or deletion
+
+Server compromise
+
+Prevention:
+
+Validate and sanitize all inputs
+
+Use prepared statements and parameterized queries
+
+Apply filtering and secure coding practices
+
+
+
+
+
+4. Insecure Design
+
+Description:
+Security weaknesses caused by flawed design rather than poor implementation.
+
+Common Causes:
+
+Insecure SDLC practices
+
+Vulnerable components
+
+Poor business logic
+
+Insufficient threat modeling
+
+Impact:
+
+Data exposure
+
+Application compromise
+
+Logic manipulation
+
+Prevention:
+
+Integrate security early in the SDLC
+
+Use secure components only
+
+Perform continuous testing and risk profiling
+
+
+
+
+
+5. Security Misconfiguration
+
+Description:
+Occurs when security settings are incorrect, incomplete, or left at insecure defaults.
+
+Common Issues:
+
+Unnecessary services enabled
+
+Default passwords/configurations
+
+Outdated components
+
+Overly detailed error messages
+
+Impact:
+
+Unauthorized access
+
+System compromise
+
+Prevention:
+
+Apply consistent hardening standards
+
+Remove unnecessary features
+
+Keep configurations updated
+
+
+
+
+
+6. Vulnerable and Outdated Components
+
+Description:
+Using libraries, frameworks, or software versions with known vulnerabilities.
+
+Common Issues:
+
+No component inventory
+
+Missing updates/patches
+
+Using deprecated versions
+
+Impact:
+
+Wide range of attacks
+
+Weak security posture
+
+Prevention:
+
+Continuous vulnerability scanning
+
+Apply updates immediately
+
+Track component versions
+
+
+
+
+
+
+7. Identification and Authentication Failures
+
+Description:
+Failures in verifying user identity or managing sessions securely.
+
+Common Issues:
+
+Weak or default passwords
+
+Missing MFA
+
+Poor session management
+
+Impact:
+
+Account takeover
+
+Unauthorized access
+
+Prevention:
+
+Strong password policies
+
+Enforce MFA
+
+Secure session IDs and tokens
+
+
+
+
+
+
+
+8. Software and Data Integrity Failures
+
+Description:
+Occurs when code, updates, or data pipelines do not protect against integrity violations.
+
+Common Issues:
+
+Insecure CI/CD pipelines
+
+Untrusted dependencies
+
+Insecure deserialization
+
+Impact:
+
+Code execution
+
+System compromise
+
+Malware injection
+
+Prevention:
+
+Use trusted sources
+
+Add integrity checks
+
+Implement secure update mechanisms
+
+
+
+
+
+
+9. Security Logging and Monitoring Failures
+
+Description:
+Lack of proper logging and monitoring makes detecting attacks difficult.
+
+Common Issues:
+
+Missing audit logs
+
+Logs not reviewed
+
+No alerting or response plan
+
+Impact:
+
+Undetected breaches
+
+Long response times
+
+Prevention:
+
+Implement centralized logging
+
+Monitor critical events
+
+Develop incident response procedures
+
+
+
+
+
+
+10. Server-Side Request Forgery (SSRF)
+
+Description:
+Occurs when applications fetch external resources without validating user input.
+
+Impact:
+
+Bypassing firewalls/VPNs
+
+Unauthorized internal access
+
+Remote code execution
+
+Prevention:
+
+Validate all URLs
+
+Enforce network segmentation
+
+Use allowlists
